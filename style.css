@@ -501,6 +501,14 @@ nav {
     gap: 2.5rem;
 }
 
+.coming-soon {
+    width: 100%;
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--secondary-text);
+    padding: 4rem 0;
+}
+
 .project-card {
     width: 300px;
     overflow: hidden;
