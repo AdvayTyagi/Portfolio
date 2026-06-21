@@ -36,7 +36,31 @@
     <section id="projects" class="projects-section">
         <div class="container">
             <h2 class="section-title">Featured Projects</h2>
+            <div class="project-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="frontend">Frontend</button>
+                <button class="filter-btn" data-filter="backend">Backend</button>
+                <button class="filter-btn" data-filter="fullstack">Fullstack</button>
+            </div>
             <div class="projects-grid">
+                <div class="project-card glass-card" data-category="frontend">
+                    <div class="project-img-wrapper">
+                        <img src="./notes_app.png" alt="Notes App">
+                        <div class="project-overlay">
+                            <a href="https://github.com/AdvayTyagi/Notes" class="project-link" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                            <a href="https://notesapp-mu-tawny.vercel.app" class="project-link" target="_blank" title="Live Demo"><i class="fas fa-link"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Notes App</h3>
+                        <p>A clean and intuitive note-taking application designed to organize your thoughts.</p>
+                        <div class="project-tech">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+                    </div>
+                </div>
                 <p class="coming-soon">More Projects Coming Soon</p>
             </div>
         </div>

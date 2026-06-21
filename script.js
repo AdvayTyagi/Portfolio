@@ -69,6 +69,12 @@ document.querySelectorAll('.nav-links a').forEach(link => {
 // Project Filtering
 const filterBtns = document.querySelectorAll('.filter-btn');
 const projectCards = document.querySelectorAll('.project-card');
+const comingSoon = document.querySelector('.coming-soon');
+
+// Hide coming soon text initially if there are projects
+if (comingSoon && projectCards.length > 0) {
+    comingSoon.style.display = 'none';
+}
 
 filterBtns.forEach(btn => {
     btn.addEventListener('click', () => {
@@ -78,10 +84,12 @@ filterBtns.forEach(btn => {
         btn.classList.add('active');
 
         const filterValue = btn.getAttribute('data-filter');
+        let visibleCount = 0;
 
         projectCards.forEach(card => {
             if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
                 card.style.display = 'flex';
+                visibleCount++;
                 setTimeout(() => {
                     card.style.opacity = '1';
                     card.style.transform = 'translateY(0)';
@@ -94,6 +102,16 @@ filterBtns.forEach(btn => {
                 }, 300);
             }
         });
+
+        if (comingSoon) {
+            if (visibleCount === 0) {
+                setTimeout(() => {
+                    comingSoon.style.display = 'block';
+                }, 300);
+            } else {
+                comingSoon.style.display = 'none';
+            }
+        }
     });
 });
 

@@ -467,6 +467,16 @@ nav {
 }
 
 /* Projects Section */
+.projects-section {
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+}
+
+.projects-section .container {
+    width: 100%;
+}
+
 .project-filters {
     display: flex;
     justify-content: center;
@@ -490,7 +500,7 @@ nav {
 .filter-btn:hover,
 .filter-btn.active {
     background: var(--gradient-primary);
-    color: white;
+    color: #2E1F26;
     border-color: transparent;
 }
 
@@ -504,8 +514,9 @@ nav {
 .coming-soon {
     width: 100%;
     text-align: center;
-    font-size: 1.2rem;
-    color: var(--secondary-text);
+    font-size: 2.2rem;
+    font-family: 'Black Ops One', cursive;
+    color: var(--text-color);
     padding: 4rem 0;
 }
 
@@ -775,7 +786,7 @@ footer {
     text-align: center;
     padding: 2rem 0;
     border-top: 1px solid var(--glass-border);
-    color: var(--secondary-text);
+    color: var(--text-color);
     font-size: 0.9rem;
 }
 
