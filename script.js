@@ -136,48 +136,7 @@ if (copyBtn) {
     });
 }
 
-// Contact Form — Formspree
-const contactForm = document.getElementById('contact-form');
-if (contactForm) {
-    contactForm.addEventListener('submit', async (e) => {
-        e.preventDefault();
-        const btn = contactForm.querySelector('button');
-        const originalText = btn.textContent;
-        btn.textContent = 'Sending...';
-        btn.disabled = true;
 
-        const data = {
-            name: document.getElementById('name').value,
-            email: document.getElementById('email').value,
-            message: document.getElementById('message').value,
-        };
-
-        try {
-            const response = await fetch('https://formspree.io/f/mojrbzpd', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(data),
-            });
-
-            if (response.ok) {
-                btn.textContent = 'Message Sent! ✓';
-                btn.style.background = '#4caf50';
-                contactForm.reset();
-            } else {
-                throw new Error('Server error');
-            }
-        } catch {
-            btn.textContent = 'Failed — Try Again';
-            btn.style.background = '#f44336';
-        } finally {
-            btn.disabled = false;
-            setTimeout(() => {
-                btn.textContent = originalText;
-                btn.style.background = '';
-            }, 3000);
-        }
-    });
-}
 
 // Resume Download Placeholder logic
 const resumeBtn = document.getElementById('resume-download');

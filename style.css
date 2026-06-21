@@ -679,9 +679,13 @@ nav {
 
 /* Contact Section */
 .contact-container {
-    display: grid;
-    grid-template-columns: 1fr 1.5fr;
-    gap: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+    gap: 2rem;
     padding: 3rem;
 }
 
@@ -728,6 +732,7 @@ nav {
 
 .social-links {
     display: flex;
+    justify-content: center;
     gap: 1rem;
 }
 
@@ -751,35 +756,7 @@ nav {
     transform: translateY(-5px);
 }
 
-.contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-}
 
-.form-group input,
-.form-group textarea {
-    width: 100%;
-    padding: 1rem;
-    background: var(--glass-bg);
-    border: 1px solid var(--glass-border);
-    border-radius: 10px;
-    color: #f0f0f5;
-    font-family: inherit;
-    font-size: 1rem;
-    transition: var(--transition);
-}
-
-.form-group input:focus,
-.form-group textarea:focus {
-    outline: none;
-    border-color: var(--accent-blue);
-    background: rgba(0, 210, 255, 0.05);
-}
-
-.contact-form .btn-primary {
-    align-self: flex-start;
-}
 
 /* Footer */
 footer {
